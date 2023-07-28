@@ -1,25 +1,21 @@
 'use client'
-import React, { useState } from 'react'
-import Image from 'next/image'
-import styles from './page.module.css'
+import Link from "next/link";
+import { useRouter } from "next/navigation";
 
-export default function Home() {
-  const [data,setData]=useState(0)
-  function handleClick(){
-    setData(data+1)
+export default function Home(){
+  
+  function navigate(name){
+    router.push(name)
   }
-  function handledec(){
-    if(data>0){
-      setData(data-1)
-    }
-  }
-  return (
-    <main className={styles.main}>
-      <h1>Bablu kumar</h1>
-      {data}
-      <button onClick={handleClick}>Click Me +</button>
-      <button onClick={handledec}>Click Me -</button>
-    </main>
+const router=useRouter()
+  return(
+    <div>
+      <h2>This Is Home Page</h2>
+      <h1>Bablu Kumar</h1>
+      <Link href='/login'> Go To LogIn Page</Link><br/>
+      <Link href='/about'> Go To About Page</Link><br/><br/><br/>
+      <button onClick={()=>navigate('/navigation')}>Navigate</button>
+      <button onClick={()=>navigate('/login')}>Login</button>
+    </div>
   )
 }
-
