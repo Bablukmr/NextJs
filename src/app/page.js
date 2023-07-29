@@ -16,7 +16,8 @@ const router=useRouter()
       <Link href='/about'> Go To About Page</Link><br/><br/><br/>
       <button onClick={()=>navigate('/navigation')}>Navigate</button><br/>
       <button onClick={()=>navigate('/login')}>Login</button><br/>
-      <button onClick={()=>navigate('/about/aboutstudents')}>AboutS Students</button>
+      <button onClick={()=>navigate('/about/aboutstudents')}>AboutS Students</button><br/>
+      <button style={{color:"blue"}} onClick={()=>navigate("/studentlist")}>Go To Students List</button>
 
     </div>
   )
