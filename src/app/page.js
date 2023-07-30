@@ -11,9 +11,9 @@ export default function Home(){
 
   return(
     <div>
-     <h1>Fetch Product List With API</h1>
-     <h1 className={roboto.className}> This Is Google font wit Next.js</h1>
-     <Link href='/productlist'>Go To Product Page</Link>
+     <h1>Fetch Product User And Create New Pages</h1>
+     <h1 className={roboto.className}> Like sarkarinaukri.com</h1>
+     <Link href='/users'>Go To List Page</Link>
     </div>
   )
 }
