@@ -13,12 +13,12 @@ export default async function Page() {
   return (
     <>
       <h1>Product List</h1>
-      <Image  src={bk} width='200' height='200'/>
+      <Image priority={true} alt="Img" src={bk} width='200' height='200'/>
       {products.map((item) =>(  
         <div key={item.id}>
             <h4>{item.title}, Price: $ {item.price}</h4>
             {/* <img src={item.images[0]} width='200' height='200'/> */}
-      <Image   src={item.images[0]} width='200' height='200'/>
+      <Image alt="Img" priority={true} src={item.images[0]} width='200' height='200'/>
 
             <Product title={item.title}/>
         </div>
