@@ -25,14 +25,10 @@ function Update({ params }) {
       setEmail(res.email);
     } catch (error) {
       console.error("Error fetching data:", error);
-      // You can set some state to indicate an error or handle it accordingly
     }
   };
-  
-
   const handleData = async () => {
     try {
-      // Assuming you have an API endpoint to update user data
       const res = await fetch(`http://localhost:3000/api/data/${params.usersid}`, {
         method: "PUT",
         headers: {
@@ -45,13 +41,10 @@ function Update({ params }) {
         }),
       });
 
-      // Assuming you handle the API response accordingly
       if (res.ok) {
         console.log("User data updated successfully!");
-        // You may want to display a success message or redirect the user
       } else {
         console.error("Failed to update user data:", res.status);
-        // Handle the error, display an error message, etc.
       }
     } catch (error) {
       console.error("Error updating data:", error);
