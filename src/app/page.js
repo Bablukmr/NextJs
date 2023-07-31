@@ -13,7 +13,8 @@ export default function Home(){
     <div>
      <h1>Fetch Product User And Create New Pages</h1>
      <h1 className={roboto.className}> Like sarkarinaukri.com</h1>
-     <Link href='/users'>Go To List Page</Link>
+    <h4> <Link href='/users'>Go To User List Page</Link></h4><br/>
+    <h4> <Link href='/adduser'>Go To AddUser Page</Link></h4>
     </div>
   )
 }

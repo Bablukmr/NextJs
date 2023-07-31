@@ -1,16 +1,15 @@
 "use client"
 import React, { useState } from 'react'
 import './styles.css'
-import { POST } from '../api/data/route'
+
 function AddUser() {
 
   const [name,setName]=useState("")
   const [age,setAge]=useState("")
   const [email,setEmail]=useState("")
 const handleData=async()=>{
-
   let res =await fetch("http://localhost:3000/api/data",{
-    method:'Post',
+    method:'POST',
     body:JSON.stringify({name,age,email})
   })
 let data=await res.json()
