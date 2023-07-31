@@ -1,20 +1,21 @@
-import Link from 'next/link'
-import UserData from '../../../pages/page'
+import Link from "next/link";
+
+async function userData() {
+  const res = await fetch("http://localhost:3000/api/data");
+  return res.json();
+}
 
 export default async function Pages() {
-    const data=UserData()
-    const newdata=await data
-    // console.log(newdata)
+  const user = await userData();
   return (
     <div>
-        <h1>All User List</h1>
-        {
-           newdata.map((item)=>
-           <h2 key={item.id}>
-           <Link href={`/users/${item.id}`}>{item.name}</Link>
-           </h2>
-           )
-        }
+      <h1>All User List</h1>
+      {user.map((item) => (
+        <div>
+         <h4> <Link href={`/users/${item.id}`}>{item.name}</Link></h4>
+        </div>
+      ))}
+      <Link href={'/'}>Go To Home</Link>
     </div>
-  )
+  );
 }
