@@ -5,7 +5,7 @@ const roboto=Roboto({
   weight:'100',
   subsets:['latin'],
   display:'swap'
-})
+})     
 
 export default function Home(){
 
